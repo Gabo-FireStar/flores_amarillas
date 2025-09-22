@@ -1983,3 +1983,77 @@ body {
     opacity: 1;
   }
 }
+
+#nombre {
+  font-size: 9rem; 
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  color: #d6336c; /* Color rosa fuerte */
+  margin-bottom: 0.6em;
+  top: 0;
+  z-index: 401;
+  position: fixed;
+  transform: translateX(-80%);
+  margin-top: 1em;
+  text-align: center;
+}
+
+
+#mensajeParrafo {
+  font-family: "Playfair Display", serif;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  z-index: 400;
+
+  margin-top: 10.5em;
+  font-size: 4rem; /* ajustado para mejor legibilidad en móviles */
+  color: #e6fb07ff;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 105, 180, 0.385),
+    rgba(255, 182, 193, 0.745)
+  );
+  border: 1px solid rgba(255, 182, 193, 0.673);
+  border-radius: 15px;
+  padding: 2rem 1rem;
+  width: 50rem;
+  height: 30rem;
+
+  box-shadow: 0 40px 30px rgba(146, 210, 68, 0.264);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  box-sizing: border-box;
+
+}
+
+
+
+@media (max-width: 480px) {
+  #mensajeParrafo {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .night {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.2vmin); /* Aumentamos ligeramente el blur en pantallas pequeñas si se desea */
+  }
+}
+
+audio {
+  width: 300px;
+  margin-top: 20px;
+  border: 2px solid #555;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 5px;
+}
