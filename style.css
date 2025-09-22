@@ -1993,7 +1993,7 @@ body {
   top: 0;
   z-index: 401;
   position: fixed;
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   margin-top: 1em;
   text-align: center;
 }
