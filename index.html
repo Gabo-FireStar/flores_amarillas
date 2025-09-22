@@ -7,14 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
 
 </head>
-  <audio controls autoplay loop>
-    <source src="src/audio.mp3" type="audio/mpeg">
-  </audio>
 <body>
   <div class="contMensaje">
     <p id="nombre">Tu no debes ser Expectadora</p>
-    <p id="mensajeParrafo">Aunque hoy nadie te regale flores,recuerda que tu brillo va más allá del color,eres fuerza, luz y valor,una historia que merece ser celebrada hoy.</p>
-    </div>
+    <p id="mensajeParrafo">Aunque hoy nadie te regale flores,recuerda que tu brillo va más allá del color,eres fuerza, luz y valor,una historia que merece ser celebrada hoy. <br><span class="spanTexto"> Toca la pantalla para escuchar</span></p>
+  </div>
 <!-- partial:index.partial.html -->
 <body class="container">
   <div class="night">
@@ -340,7 +337,18 @@
       </div>
     </div>
   </div>
-  
+    <audio id="miAudio" src="src/audio.mp3"></audio>
+     <script>
+    function reproducirAudio() {
+      const audio = document.getElementById('miAudio');
+      audio.play().catch(err => console.log('No se pudo reproducir:', err));
+      document.removeEventListener('click', reproducirAudio);
+      document.removeEventListener('touchstart', reproducirAudio);
+    }
+
+    document.addEventListener('click', reproducirAudio);
+    document.addEventListener('touchstart', reproducirAudio);
+  </script>
   <script src="main.js"></script>
   
   <div class="bubbles">
